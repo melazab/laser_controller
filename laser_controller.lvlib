@@ -14,9 +14,9 @@
 	<Item Name="Examples" Type="Folder">
 		<Item Name="laser_constant_current_output.vi" Type="VI" URL="../laser_constant_current_output.vi"/>
 		<Item Name="laser_current_amplitude_sweep.vi" Type="VI" URL="../laser_current_amplitude_sweep.vi"/>
-		<Item Name="laser_constant_current_output_with_DAQ_analog_output_.vi" Type="VI" URL="../laser_constant_current_output_with_DAQ_analog_output_.vi"/>
+		<Item Name="laser_constant_current_output_with_DAQ_analog_output.vi" Type="VI" URL="../laser_constant_current_output_with_DAQ_analog_output.vi"/>
 		<Item Name="laser_constant_current_output_with_DAQ_analog_output_timed.vi" Type="VI" URL="../laser_constant_current_output_with_DAQ_analog_output_timed.vi"/>
-		<Item Name="laser_constant_current_output_with_DAQ_analog_output_timed_new.vi" Type="VI" URL="../laser_constant_current_output_with_DAQ_analog_output_timed_new.vi"/>
+		<Item Name="laser_constant_current_output_with_DAQ_analog_output_timed_v1.vi" Type="VI" URL="../laser_constant_current_output_with_DAQ_analog_output_timed_v1.vi"/>
 		<Item Name="laser_controller_state_machine.vi" Type="VI" URL="../laser_controller_state_machine.vi"/>
 		<Item Name="power_measure.vi" Type="VI" URL="../power_measure.vi"/>
 		<Item Name="laser_calibrate.vi" Type="VI" URL="../laser_calibrate.vi"/>

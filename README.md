@@ -26,7 +26,7 @@ The Ophir NOVA support (`Ophir_NOVA/`) is built on Ophir's LabVIEW COM demo, whi
 **Software:**
 
 - LabVIEW 2025 Q3 or later - grab it from the [NI website](https://www.ni.com/en/support/downloads/software-products/download.labview.html)
-- LDC-3736 LabVIEW drivers from [Newport's site](https://www.newport.com/medias/sys_master/images/images/h46/he4/8797190881310/LDC-37X6-LabVIEW-Drivers-Version-1.1.zip)
+- LDC-37X6 LabVIEW drivers v1.1 from [Newport/MKS](https://api.p1.mks.com/medias/sys_master/images/images/h46/he4/8797190881310/LDC-37X6-LabVIEW-Drivers-Version-1.1.zip) - see [Installing the LDC-37X6 driver](#installing-the-ldc-37x6-driver)
 - If you want to try the DAQ examples: NI-DAQmx drivers
 - For power measurement/calibration: Ophir StarLab / OphirLMMeasurement COM object (installed with Ophir's StarLab software)
 
@@ -36,6 +36,16 @@ The Ophir NOVA support (`Ophir_NOVA/`) is built on Ophir's LabVIEW COM demo, whi
 - USB-A to USB-B cable (the USB port is hiding on the back panel)
 - For DAQ examples: Any NI-DAQ device with at least 1 analog output
 - For power measurement/calibration: Ophir NOVA power meter with a compatible sensor
+
+## Installing the LDC-37X6 driver
+
+The zip holds a single library, `ILX LDC-37X6 LabVIEW Drivers Version 1.1.llb`. The VIs in this project look for it at this exact path, so put it there before opening the project:
+
+```
+<LabVIEW install dir>\instr.lib\Newport LDC-37X6\ILX LDC-37X6 LabVIEW Drivers Version 1.1.llb
+```
+
+e.g. `C:\Program Files\National Instruments\LabVIEW 2025\instr.lib\Newport LDC-37X6\`. Restart LabVIEW afterwards and the driver also shows up under the Instrument I/O » Instrument Drivers palette. If it's missing, VIs such as `Initialize.vi` load broken with "Missing subVI LDC-37X6 ...".
 
 ## A few helpful notes
 

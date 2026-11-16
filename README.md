@@ -11,9 +11,15 @@ This project gives you LabVIEW VIs to control your LDC-3736 laser controller fro
 ## Getting started
 
 1. Open the _laser_controller.lvproj_ LabVIEW project
-2. Navigate to the Examples directory
+2. Expand _laser_controller.lvlib_ - all the VIs live in the repo root and are members of the library
 3. Pick any `*.vi` file and run it to see what it does
-4. Start with the basic examples, then work your way up to the DAQ integration ones
+4. Start with the basic ones (`laser_constant_current_output.vi`, `laser_single_current_output.vi`), then work your way up to the DAQ integration ones (`laser_constant_current_output_with_DAQ_analog_output_*.vi`, `current_pulse_train*.vi`)
+
+## Power calibration
+
+`laser_calibrate.vi` steps the laser through the current levels listed in `calibration_config.csv` (`Current_mA, time_s` - the drive current and how long to hold it), and measures the optical output at each step with an Ophir NOVA power meter (`power_measure.vi`). `convert_current_to_power.vi` then maps a drive current to optical power.
+
+The Ophir NOVA support (`Ophir_NOVA/`) is built on Ophir's LabVIEW COM demo, which is included as-is (`LabVIEW COM Demo.llb` + its `.doc`) because the library depends on it.
 
 ## What you'll need
 
@@ -22,12 +28,14 @@ This project gives you LabVIEW VIs to control your LDC-3736 laser controller fro
 - LabVIEW 2025 Q3 or later - grab it from the [NI website](https://www.ni.com/en/support/downloads/software-products/download.labview.html)
 - LDC-3736 LabVIEW drivers from [Newport's site](https://www.newport.com/medias/sys_master/images/images/h46/he4/8797190881310/LDC-37X6-LabVIEW-Drivers-Version-1.1.zip)
 - If you want to try the DAQ examples: NI-DAQmx drivers
+- For power measurement/calibration: Ophir StarLab / OphirLMMeasurement COM object (installed with Ophir's StarLab software)
 
 **Hardware:**
 
 - Your LDC-3736 laser controller (obviously!)
 - USB-A to USB-B cable (the USB port is hiding on the back panel)
 - For DAQ examples: Any NI-DAQ device with at least 1 analog output
+- For power measurement/calibration: Ophir NOVA power meter with a compatible sensor
 
 ## A few helpful notes
 
